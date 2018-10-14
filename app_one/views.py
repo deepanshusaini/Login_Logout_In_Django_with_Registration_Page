@@ -5,7 +5,7 @@ from .forms import UserForm,UserProfileInfoForm
 #you can also use class base view
 from django.views.generic import TemplateView
 
-class index(TemplateView):
+class Index(TemplateView):
     template_name='app_one/index.html'
 # def index(request):
 #     return render(request,'app_one/index.html')
