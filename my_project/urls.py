@@ -16,12 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app_one import views
+from app_one.views import Index
 from django.conf.urls import include
-urlpatterns = [
+
     path('',views.index,name='index'),
     path('special/', views.special, name='special'),
-
     path('logout/',views.user_logout,name='logout'),
-    path('app_one/',include('app_one.urls')),
-    path('admin/', admin.site.urls),
+
 ]

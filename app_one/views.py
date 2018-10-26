@@ -7,9 +7,13 @@ from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
+#you can also use class base view
+from django.views.generic import TemplateView
 
-def index(request):
-    return render(request,'app_one/index.html')
+class Index(TemplateView):
+    template_name='app_one/index.html'
+# def index(request):
+#     return render(request,'app_one/index.html')
 
 @login_required
 def special(request):
